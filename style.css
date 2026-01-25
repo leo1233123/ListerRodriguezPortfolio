@@ -69,6 +69,11 @@ body {
   background-clip: text;
 }
 
+.nav-logo img {
+  height: 35px;
+  width: auto;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
