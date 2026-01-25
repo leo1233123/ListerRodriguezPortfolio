@@ -387,7 +387,6 @@
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.2);
-      margin-right: 1rem;
     }
 
     .cv-button::before {
@@ -398,6 +397,38 @@
     .cv-button:hover {
       background: rgba(255, 255, 255, 0.15);
       border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .github-button {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .github-button::before {
+      content: '🐙';
+      font-size: 1.2rem;
+    }
+
+    .github-button:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .linkedin-button {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .linkedin-button::before {
+      content: '💼';
+      font-size: 1.2rem;
+    }
+
+    .linkedin-button:hover {
+      background: rgba(0, 119, 181, 0.2);
+      border-color: rgba(0, 119, 181, 0.4);
     }
 
     .back-button-container {
@@ -586,9 +617,11 @@
         </div>
       </div>
 
-      <!-- CV and Back Button -->
+      <!-- CV, GitHub, LinkedIn and Back Button -->
       <div class="back-button-container">
         <a href="Resume/Lister Rodriguez_CV.pdf" target="_blank" class="back-button cv-button">View CV</a>
+        <a href="https://github.com/leo1233123" target="_blank" class="back-button github-button">Visit GitHub</a>
+        <a href="https://www.linkedin.com/in/lister-rodriguez-3937b0318" target="_blank" class="back-button linkedin-button">Visit LinkedIn</a>
         <a href="index.html" class="back-button">Back to Portfolio</a>
       </div>
     </div>
