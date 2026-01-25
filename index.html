@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Lister Rodriguez | Portfolio</title>
+  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Page Transition Styles */
+    body {
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    body.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .page-transition-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .page-transition-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-transition-overlay" id="pageTransition"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Lister Rodriguez</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <div class="profile-image-wrapper">
+        <a href="next.html" class="profile-image-link">
+          <img src="photos/Mypic.jpg" alt="Lister Rodriguez" class="profile-image">
+          <div class="image-ring"></div>
+        </a>
+      </div>
+      <h1 class="hero-title">
+        <span class="gradient-text">Lister Rodriguez</span>
+      </h1>
+      <p class="hero-subtitle">Virtual Assistant & Full-Stack Data Specialist</p>
+      <p class="hero-description">
+        Transforming data into intelligent solutions • Building AI-powered systems • Crafting scalable applications
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        <a href="#projects" class="btn btn-secondary">View Work</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="lead-text">
+            Detail-oriented and tech-savvy Data Specialist with a strong background
+            in Information Technology.
+          </p>
+          <p>
+            I specialize in building AI-powered systems, developing scalable web applications,
+            and handling complex datasets with precision. My passion lies in transforming raw data
+            into actionable insights and creating intelligent solutions that drive business value.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">🎯</div>
+              <div>
+                <strong>Data-Driven</strong>
+                <p>Turning complex data into clear insights</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🚀</div>
+              <div>
+                <strong>Full-Stack</strong>
+                <p>End-to-end development expertise</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🤖</div>
+              <div>
+                <strong>AI Specialist</strong>
+                <p>Building intelligent systems</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">⚛️</div>
+          <h3>Frontend</h3>
+          <p>React • Node • Modern JavaScript</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🗄️</div>
+          <h3>Backend</h3>
+          <p>MongoDB • Database Design</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🐍</div>
+          <h3>AI & ML</h3>
+          <p>Python • TensorFlow • OpenCV</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">👁️</div>
+          <h3>Computer Vision</h3>
+          <p>YOLO • Image Processing</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🏷️</div>
+          <h3>Data Labeling</h3>
+          <p>AI Data Annotation • Review</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h3>Data Tools</h3>
+          <p>Google Sheets • Excel</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">☕</div>
+            <div class="project-badge">AI/ML</div>
+          </div>
+          <h3>AI Coffee Bean Sorting System</h3>
+          <p>
+            Computer vision-based quality sorting system using YOLO and TensorFlow
+            to detect defects and classify coffee beans with high accuracy.
+          </p>
+          <div class="project-tags">
+            <span>YOLO</span>
+            <span>TensorFlow</span>
+            <span>OpenCV</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">📦</div>
+            <div class="project-badge">Full-Stack</div>
+          </div>
+          <h3>Reservation & Inventory System</h3>
+          <p>
+            Full-stack MERN application with authentication, role-based access control,
+            and optimized MongoDB performance for enterprise use.
+          </p>
+          <div class="project-tags">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon">🏷️</div>
+            <div class="project-badge">Data</div>
+          </div>
+          <h3>AI Data Labeling & Review</h3>
+          <p>
+            High-accuracy image annotation and dataset validation platform for
+            machine learning pipelines with quality assurance workflows.
+          </p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>Data Annotation</span>
+            <span>Quality Control</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="title-underline"></div>
+      </div>
+      <div class="contact-content">
+        <p class="contact-intro">
+          I'm always open to discussing new projects, creative ideas, or opportunities
+          to be part of your vision.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:listerrodriguez8@gmail.com">listerrodriguez8@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h3>Location</h3>
+              <p>Malaybalay City Bukidnon, Philippines</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-cta">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=listerrodriguez8@gmail.com&su=Portfolio%20Inquiry" target="_blank" class="btn btn-primary btn-large" id="sendMessageBtn">Send Message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Lister Rodriguez. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for navigation links
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('a[href^="#"]');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Page transition for profile image link
+      const profileLink = document.querySelector('.profile-image-link');
+      if (profileLink) {
+        profileLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          const href = this.getAttribute('href');
+          
+          // Add fade-out class to body
+          document.body.classList.add('fade-out');
+          
+          // Show transition overlay
+          const overlay = document.getElementById('pageTransition');
+          overlay.classList.add('active');
+          
+          // Navigate after transition
+          setTimeout(function() {
+            sessionStorage.setItem('pageTransition', 'true');
+            window.location.href = href;
+          }, 500);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
