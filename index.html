@@ -333,6 +333,22 @@
           }, 500);
         });
       }
+
+      // Navbar scroll effect
+      const navbar = document.querySelector('.navbar');
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', function() {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 100) {
+          navbar.classList.add('navbar-scrolled');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+        }
+        
+        lastScrollY = currentScrollY;
+      });
     });
   </script>
 
