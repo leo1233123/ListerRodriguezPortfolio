@@ -383,6 +383,29 @@
       font-size: 1.3rem;
     }
 
+    .cv-button {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin-right: 1rem;
+    }
+
+    .cv-button::before {
+      content: '📄';
+      font-size: 1.2rem;
+    }
+
+    .cv-button:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .back-button-container {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
     /* Background Decorations */
     .bg-decoration {
       position: absolute;
@@ -563,8 +586,9 @@
         </div>
       </div>
 
-      <!-- Back Button -->
+      <!-- CV and Back Button -->
       <div class="back-button-container">
+        <a href="Resume/Lister Rodriguez_CV.pdf" target="_blank" class="back-button cv-button">View CV</a>
         <a href="index.html" class="back-button">Back to Portfolio</a>
       </div>
     </div>
