@@ -57,7 +57,7 @@ body {
 }
 
 .navbar-scrolled .nav-container {
-  padding: 0.25rem 20px;
+  padding: 0.25rem 30px;
 }
 
 .navbar-scrolled .nav-logo img {
@@ -66,9 +66,9 @@ body {
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: none;
   margin: 0 auto;
-  padding: 0.03rem 30px;
+  padding: 0.75rem 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,7 +93,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .nav-links a {
@@ -798,8 +798,16 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .navbar-scrolled .nav-container {
+    padding: 0.25rem 15px;
+  }
+
+  .nav-container {
+    padding: 0.75rem 20px;
+  }
+
   .nav-links {
-    gap: 1rem;
+    gap: 1.5rem;
     font-size: 0.9rem;
   }
 
