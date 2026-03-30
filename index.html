@@ -17,25 +17,20 @@
       opacity: 1;
       transition: opacity 0.5s ease-in-out;
     }
-
     body.fade-out {
       opacity: 0;
       pointer-events: none;
     }
-
     .page-transition-overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
       z-index: 9999;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.5s ease-in-out;
     }
-
     .page-transition-overlay.active {
       opacity: 1;
       pointer-events: all;
@@ -44,10 +39,8 @@
     /* Details Modal Styles */
     .details-modal {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
       z-index: 10000;
       opacity: 0;
@@ -58,19 +51,12 @@
       justify-content: center;
       overflow: hidden;
     }
-
-    .details-modal.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
+    .details-modal.active { opacity: 1; visibility: visible; }
     .modal-content {
       display: flex;
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       position: relative;
     }
-
     .modal-photo-section {
       width: 45%;
       display: flex;
@@ -79,47 +65,36 @@
       justify-content: center;
       padding: 4rem;
       position: relative;
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+      background: linear-gradient(135deg, rgba(99,102,241,0.1) 0%, rgba(139,92,246,0.1) 100%);
       transform: translateX(-100%);
       opacity: 0;
       transition: transform 1s ease-out, opacity 1s ease-out;
     }
-
-    .details-modal.active .modal-photo-section {
-      transform: translateX(0);
-      opacity: 1;
-    }
-
+    .details-modal.active .modal-photo-section { transform: translateX(0); opacity: 1; }
     .modal-photo-container {
       position: relative;
       animation: float 6s ease-in-out infinite;
     }
-
     .modal-photo-container img {
-      width: 400px;
-      height: 400px;
+      width: 400px; height: 400px;
       border-radius: 50%;
       object-fit: cover;
-      border: 6px solid rgba(99, 102, 241, 0.3);
-      box-shadow: 0 20px 60px rgba(99, 102, 241, 0.4),
-                  0 0 0 20px rgba(139, 92, 246, 0.1),
-                  0 0 0 40px rgba(99, 102, 241, 0.05);
+      border: 6px solid rgba(99,102,241,0.3);
+      box-shadow: 0 20px 60px rgba(99,102,241,0.4),
+                  0 0 0 20px rgba(139,92,246,0.1),
+                  0 0 0 40px rgba(99,102,241,0.05);
       transition: all 0.5s ease;
     }
-
     .modal-photo-glow {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 450px;
-      height: 450px;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 450px; height: 450px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(99,102,241,0.3) 0%, transparent 70%);
       animation: pulse 3s ease-in-out infinite;
       z-index: -1;
     }
-
     .modal-content-section {
       width: 55%;
       display: flex;
@@ -131,256 +106,475 @@
       opacity: 0;
       transition: transform 1s ease-out 0.3s, opacity 1s ease-out 0.3s;
     }
-
-    .details-modal.active .modal-content-section {
-      transform: translateX(0);
-      opacity: 1;
-    }
-
+    .details-modal.active .modal-content-section { transform: translateX(0); opacity: 1; }
     .modal-content-header h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
+      font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem;
       background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
-    .modal-content-header p {
-      font-size: 1.3rem;
-      color: #cbd5e1;
-      line-height: 1.8;
-    }
-
-    .modal-traits-section {
-      margin: 3rem 0;
-    }
-
+    .modal-content-header p { font-size: 1.3rem; color: #cbd5e1; line-height: 1.8; }
+    .modal-traits-section { margin: 3rem 0; }
     .modal-section-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
+      font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem;
       color: #6366f1;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      display: flex; align-items: center; gap: 0.5rem;
     }
-
     .modal-section-title::before {
-      content: '';
-      width: 4px;
-      height: 24px;
+      content: ''; width: 4px; height: 24px;
       background: linear-gradient(135deg, #6366f1, #8b5cf6);
       border-radius: 2px;
     }
-
     .modal-traits-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2,1fr);
       gap: 1.5rem;
     }
-
     .modal-trait-card {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255,255,255,0.05);
       backdrop-filter: blur(10px);
       padding: 1.5rem;
       border-radius: 16px;
-      border: 1px solid rgba(99, 102, 241, 0.2);
+      border: 1px solid rgba(99,102,241,0.2);
       transition: all 0.3s ease;
     }
-
     .modal-trait-card:hover {
       transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(99, 102, 241, 0.4);
-      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(99,102,241,0.4);
+      box-shadow: 0 10px 30px rgba(99,102,241,0.2);
     }
-
-    .modal-trait-icon {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-
-    .modal-trait-card h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: white;
-    }
-
-    .modal-trait-card p {
-      font-size: 0.95rem;
-      color: #cbd5e1;
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    .modal-hobbies-section {
-      width: 100%;
-      max-width: 500px;
-      margin-top: 2rem;
-    }
-
-    .modal-hobbies-section .modal-section-title {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      font-size: 1.3rem;
-    }
-
-    .modal-hobbies-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center;
-    }
-
+    .modal-trait-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+    .modal-trait-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: white; }
+    .modal-trait-card p { font-size: 0.95rem; color: #cbd5e1; line-height: 1.6; margin: 0; }
+    .modal-hobbies-section { width: 100%; max-width: 500px; margin-top: 2rem; }
+    .modal-hobbies-section .modal-section-title { text-align: center; margin-bottom: 1.5rem; font-size: 1.3rem; }
+    .modal-hobbies-list { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
     .modal-hobby-tag {
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+      background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(139,92,246,0.2));
       backdrop-filter: blur(10px);
       padding: 0.75rem 1.5rem;
       border-radius: 50px;
-      border: 1px solid rgba(99, 102, 241, 0.3);
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: white;
+      border: 1px solid rgba(99,102,241,0.3);
+      font-size: 0.95rem; font-weight: 500; color: white;
       transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      display: flex; align-items: center; gap: 0.5rem;
     }
-
     .modal-hobby-tag:hover {
       transform: scale(1.05);
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.3));
-      border-color: rgba(99, 102, 241, 0.5);
-      box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+      background: linear-gradient(135deg, rgba(99,102,241,0.3), rgba(139,92,246,0.3));
+      border-color: rgba(99,102,241,0.5);
+      box-shadow: 0 5px 15px rgba(99,102,241,0.3);
     }
-
     .modal-close-btn {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-      background: rgba(255, 255, 255, 0.1);
+      position: absolute; top: 2rem; right: 2rem;
+      background: rgba(255,255,255,0.1);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: white;
-      width: 50px;
-      height: 50px;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white; width: 50px; height: 50px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; cursor: pointer;
       transition: all 0.3s ease;
       z-index: 10001;
     }
-
     .modal-close-btn:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.3);
       transform: scale(1.1);
     }
-
-    .modal-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-    }
-
+    .modal-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
     .modal-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
+      display: inline-flex; align-items: center; gap: 0.75rem;
       padding: 1rem 2.5rem;
       background: linear-gradient(135deg, #6366f1, #8b5cf6);
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 1.1rem;
+      color: white; text-decoration: none;
+      border-radius: 12px; font-weight: 600; font-size: 1.1rem;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 20px rgba(99,102,241,0.4);
+      border: 1px solid rgba(255,255,255,0.1);
     }
-
     .modal-button:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+      box-shadow: 0 8px 30px rgba(99,102,241,0.5);
       background: linear-gradient(135deg, #7c3aed, #a855f7);
     }
-
     .modal-button.secondary {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255,255,255,0.1);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255,255,255,0.2);
     }
-
     .modal-button.secondary:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: rgba(255, 255, 255, 0.3);
+      background: rgba(255,255,255,0.15);
+      border-color: rgba(255,255,255,0.3);
     }
-
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
+      0%,100% { transform: translateY(0px); }
       50% { transform: translateY(-20px); }
     }
-
     @keyframes pulse {
-      0%, 100% { transform: translate(-50%, -50%) scale(1); }
-      50% { transform: translate(-50%, -50%) scale(1.1); }
+      0%,100% { transform: translate(-50%,-50%) scale(1); }
+      50% { transform: translate(-50%,-50%) scale(1.1); }
     }
+    @media (max-width: 1024px) {
+      .modal-content { flex-direction: column; }
+      .modal-photo-section, .modal-content-section { width: 100%; padding: 3rem 2rem; }
+      .modal-photo-section { gap: 2rem; }
+      .modal-photo-container img { width: 300px; height: 300px; }
+      .modal-content-header h1 { font-size: 2.5rem; }
+      .modal-hobbies-section { max-width: 100%; }
+    }
+    @media (max-width: 768px) {
+      .modal-photo-section { padding: 2rem; }
+      .modal-content-section { padding: 2rem 1.5rem; }
+      .modal-photo-container img { width: 250px; height: 250px; }
+      .modal-content-header h1 { font-size: 2rem; }
+      .modal-content-header p { font-size: 1.1rem; }
+      .modal-traits-grid { grid-template-columns: 1fr; }
+      .modal-hobbies-list { justify-content: center; }
+    }
+
+    /* ═══════════════════════════════════════════════
+       AUTOMATION CAROUSEL
+    ═══════════════════════════════════════════════ */
+    .automation-section {
+      position: relative;
+      overflow: hidden;
+    }
+    .automation-section::before {
+      content: '';
+      position: absolute;
+      top: -250px; right: -250px;
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99,102,241,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .automation-section::after {
+      content: '';
+      position: absolute;
+      bottom: -200px; left: -200px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139,92,246,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── Carousel wrapper ── */
+    .auto-carousel-wrap {
+      position: relative;
+      margin-top: 3rem;
+    }
+
+    /* Track that clips the slides */
+    .auto-carousel-track-outer {
+      overflow: hidden;
+      border-radius: 24px;
+    }
+
+    /* Sliding strip */
+    .auto-carousel-track {
+      display: flex;
+      transition: transform 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+      will-change: transform;
+    }
+
+    /* Each slide */
+    .auto-slide {
+      min-width: 100%;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Image */
+    .auto-slide-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 7;
+      overflow: hidden;
+    }
+
+    .auto-slide-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .auto-slide:hover .auto-slide-img {
+      transform: scale(1.03);
+    }
+
+    /* Gradient overlay on image */
+    .auto-slide-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 40%,
+        rgba(10, 14, 30, 0.75) 75%,
+        rgba(10, 14, 30, 0.97) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* Info bar that sits at the bottom of the image */
+    .auto-slide-info {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 2rem 2.5rem 2rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .auto-slide-meta {
+      flex: 1;
+    }
+
+    .auto-slide-num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #818cf8;
+      margin-bottom: 0.4rem;
+    }
+
+    .auto-slide-title {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin: 0 0 0.45rem;
+      line-height: 1.3;
+    }
+
+    .auto-slide-desc {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin: 0;
+      line-height: 1.65;
+      max-width: 520px;
+    }
+
+    .auto-slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      border: 1px solid rgba(99,102,241,0.35);
+      background: rgba(99,102,241,0.12);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #a5b4fc;
+      white-space: nowrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .auto-slide-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #6366f1;
+      animation: autoblink 2s ease-in-out infinite;
+    }
+
+    @keyframes autoblink {
+      0%,100% { opacity: 1; }
+      50% { opacity: 0.25; }
+    }
+
+    /* ── Arrow buttons ── */
+    .auto-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(99,102,241,0.4);
+      background: rgba(15,23,42,0.75);
+      backdrop-filter: blur(12px);
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.25s, border-color 0.25s, transform 0.25s;
+      line-height: 1;
+    }
+    .auto-arrow:hover {
+      background: rgba(99,102,241,0.45);
+      border-color: rgba(99,102,241,0.7);
+      transform: translateY(-50%) scale(1.1);
+    }
+    .auto-arrow-prev { left: -26px; }
+    .auto-arrow-next { right: -26px; }
+
+    /* ── Dot indicators ── */
+    .auto-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 1.75rem;
+    }
+
+    .auto-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(99,102,241,0.25);
+      border: 1px solid rgba(99,102,241,0.3);
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s, width 0.3s;
+    }
+
+    .auto-dot.active {
+      background: #6366f1;
+      width: 28px;
+      border-radius: 4px;
+      transform: none;
+    }
+
+    /* ── Progress bar ── */
+    .auto-progress-bar {
+      position: absolute;
+      bottom: 0; left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #6366f1, #a855f7);
+      border-radius: 0 2px 2px 0;
+      transition: width 0.1s linear;
+      pointer-events: none;
+    }
+
+    /* ── Thumbnail strip ── */
+    .auto-thumbs {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+      justify-content: center;
+    }
+
+    .auto-thumb {
+      width: 80px; height: 52px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border-color 0.3s, transform 0.3s, opacity 0.3s;
+      opacity: 0.45;
+      flex-shrink: 0;
+    }
+
+    .auto-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .auto-thumb.active {
+      border-color: #6366f1;
+      opacity: 1;
+      transform: translateY(-3px);
+    }
+
+    .auto-thumb:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
+    /* ── Lightbox ── */
+    .auto-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 20000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(4, 8, 20, 0.95);
+      backdrop-filter: blur(16px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .auto-lightbox.open { opacity: 1; visibility: visible; }
+
+    .auto-lb-inner {
+      position: relative;
+      max-width: 92vw;
+      transform: scale(0.93);
+      transition: transform 0.35s ease;
+    }
+    .auto-lightbox.open .auto-lb-inner { transform: scale(1); }
+
+    .auto-lb-img {
+      max-width: 92vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 14px;
+      box-shadow: 0 30px 100px rgba(0,0,0,0.8);
+      display: block;
+    }
+
+    .auto-lb-caption {
+      text-align: center;
+      margin-top: 1rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    .auto-lb-close {
+      position: absolute;
+      top: -52px; right: 0;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: white;
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .auto-lb-close:hover { background: rgba(255,255,255,0.18); }
+
+    .auto-lb-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(99,102,241,0.25);
+      border: 1px solid rgba(99,102,241,0.4);
+      color: white;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      user-select: none;
+    }
+    .auto-lb-nav:hover {
+      background: rgba(99,102,241,0.55);
+      transform: translateY(-50%) scale(1.1);
+    }
+    .auto-lb-prev { left: -64px; }
+    .auto-lb-next { right: -64px; }
 
     /* Responsive */
-    @media (max-width: 1024px) {
-      .modal-content {
-        flex-direction: column;
-      }
-      .modal-photo-section, .modal-content-section {
-        width: 100%;
-        padding: 3rem 2rem;
-      }
-      .modal-photo-section {
-        gap: 2rem;
-      }
-      .modal-photo-container img {
-        width: 300px;
-        height: 300px;
-      }
-      .modal-content-header h1 {
-        font-size: 2.5rem;
-      }
-      .modal-hobbies-section {
-        max-width: 100%;
-      }
-    }
-
     @media (max-width: 768px) {
-      .modal-photo-section {
-        padding: 2rem;
-      }
-      .modal-content-section {
-        padding: 2rem 1.5rem;
-      }
-      .modal-photo-container img {
-        width: 250px;
-        height: 250px;
-      }
-      .modal-content-header h1 {
-        font-size: 2rem;
-      }
-      .modal-content-header p {
-        font-size: 1.1rem;
-      }
-      .modal-traits-grid {
-        grid-template-columns: 1fr;
-      }
-      .modal-hobbies-list {
-        justify-content: center;
-      }
+      .auto-arrow-prev { left: 8px; }
+      .auto-arrow-next { right: 8px; }
+      .auto-slide-title { font-size: 1.15rem; }
+      .auto-slide-info { padding: 1.25rem 1.25rem 1.25rem; }
+      .auto-slide-desc { display: none; }
+      .auto-thumbs { display: none; }
+      .auto-lb-prev { left: -52px; }
+      .auto-lb-next { right: -52px; }
     }
   </style>
 </head>
@@ -398,6 +592,7 @@
         <a href="#skills">Skills</a>
         <a href="#qualifications">Qualifications</a>
         <a href="#projects">Projects</a>
+        <a href="#automation">Automation</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -444,8 +639,7 @@
       <div class="about-content">
         <div class="about-text">
           <p class="lead-text">
-            Detail-oriented and tech-savvy Data Specialist with a strong background
-            in Information Technology.
+            Detail-oriented and tech-savvy Data Specialist with a strong background in Information Technology.
           </p>
           <p>
             I specialize in building AI-powered systems, developing scalable web applications,
@@ -527,7 +721,7 @@
   <section id="qualifications" class="section qualifications-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">04</span>
+        <span class="section-number">03</span>
         <h2 class="section-title">AI Developer — YOLOv8 & Laravel</h2>
         <div class="title-underline"></div>
       </div>
@@ -571,7 +765,7 @@
   <section id="projects" class="section projects-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">03</span>
+        <span class="section-number">04</span>
         <h2 class="section-title">Featured Projects</h2>
         <div class="title-underline"></div>
       </div>
@@ -581,22 +775,15 @@
             <div class="project-icon">🎬</div>
             <div class="project-badge">Content</div>
           </div>
-
           <h3>Video Editing & AI Content Production</h3>
-
           <p>
-            4 years of professional video editing using CapCut Pro. 
-            Managed multiple TikTok accounts, implemented AI-powered scripting, 
+            4 years of professional video editing using CapCut Pro.
+            Managed multiple TikTok accounts, implemented AI-powered scripting,
             content ideation, and trend-based short-form video production.
           </p>
-
           <div class="project-tags">
-            <span>CapCut Pro</span>
-            <span>TikTok Growth</span>
-            <span>AI Scripting</span>
-            <span>Content Strategy</span>
-            <span>AI Tools</span>
-            <span>Short Form Content</span>
+            <span>CapCut Pro</span><span>TikTok Growth</span><span>AI Scripting</span>
+            <span>Content Strategy</span><span>AI Tools</span><span>Short Form Content</span>
           </div>
         </div>
         <div class="project-card">
@@ -610,16 +797,10 @@
             to detect defects and classify coffee beans with high accuracy.
           </p>
           <div class="project-tags">
-            <span>YOLO</span>
-            <span>TensorFlow</span>
-            <span>OpenCV</span>
-            <span>CVAT</span>
-            <span>Python</span>
-            <span>Data Preprocessing</span>
-            <span>Object Detection</span>
+            <span>YOLO</span><span>TensorFlow</span><span>OpenCV</span>
+            <span>CVAT</span><span>Python</span><span>Data Preprocessing</span><span>Object Detection</span>
           </div>
         </div>
-
         <div class="project-card">
           <div class="project-header">
             <div class="project-icon">📦</div>
@@ -631,15 +812,10 @@
             and optimized MongoDB performance for enterprise use.
           </p>
           <div class="project-tags">
-            <span>React</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-            <span>Express</span>
-            <span>JWT</span>
-            <span>REST API</span>
+            <span>React</span><span>Node.js</span><span>MongoDB</span>
+            <span>Express</span><span>JWT</span><span>REST API</span>
           </div>
         </div>
-
         <div class="project-card">
           <div class="project-header">
             <div class="project-icon">🏷️</div>
@@ -651,14 +827,142 @@
             machine learning pipelines with quality assurance workflows.
           </p>
           <div class="project-tags">
-            <span>Python</span>
-            <span>Data Annotation</span>
-            <span>Quality Control</span>
-            <span>AI Training Data</span>
-            <span>Review Processes</span>
+            <span>Python</span><span>Data Annotation</span><span>Quality Control</span>
+            <span>AI Training Data</span><span>Review Processes</span>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- AUTOMATION SHOWCASE -->
+  <section id="automation" class="section automation-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2 class="section-title">Automation Showcase</h2>
+        <div class="title-underline"></div>
+      </div>
+      <p style="color:#94a3b8; max-width:580px; line-height:1.8; margin-top:0.4rem;">
+        n8n workflow automations I've built — click any slide to view the full diagram, use arrows or thumbnails to browse.
+      </p>
+
+      <div class="auto-carousel-wrap">
+        <!-- Arrow buttons -->
+        <button class="auto-arrow auto-arrow-prev" id="autoPrev" aria-label="Previous">&#8249;</button>
+        <button class="auto-arrow auto-arrow-next" id="autoNext" aria-label="Next">&#8250;</button>
+
+        <!-- Slide track -->
+        <div class="auto-carousel-track-outer">
+          <div class="auto-progress-bar" id="autoProgress"></div>
+          <div class="auto-carousel-track" id="autoTrack">
+
+            <!-- Slide 1 -->
+            <div class="auto-slide" onclick="openAutoLb(0)">
+              <div class="auto-slide-img-wrap">
+                <img src="photos/AI1.png" alt="AI Content Generation" class="auto-slide-img">
+                <div class="auto-slide-gradient"></div>
+                <div class="auto-slide-info">
+                  <div class="auto-slide-meta">
+                    <div class="auto-slide-num">Project 01 / 05</div>
+                    <h3 class="auto-slide-title">AI Content Generation</h3>
+                    <p class="auto-slide-desc">n8n-powered automation pipeline for AI-generated content using Gemini and OpenAI — end-to-end from prompt to published post.</p>
+                  </div>
+                  <div>
+                    <div class="auto-slide-badge">n8n · AI Workflow</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="auto-slide" onclick="openAutoLb(1)">
+              <div class="auto-slide-img-wrap">
+                <img src="photos/AI2.png" alt="Notion Automation Advisor" class="auto-slide-img">
+                <div class="auto-slide-gradient"></div>
+                <div class="auto-slide-info">
+                  <div class="auto-slide-meta">
+                    <div class="auto-slide-num">Project 02 / 05</div>
+                    <h3 class="auto-slide-title">Notion Automation Advisor</h3>
+                    <p class="auto-slide-desc">Reads a Notion database, analyses repetitive company events, and automatically suggests the next automation to build.</p>
+                  </div>
+                  <div>
+                    <div class="auto-slide-badge">n8n · Notion · AI</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="auto-slide" onclick="openAutoLb(2)">
+              <div class="auto-slide-img-wrap">
+                <img src="photos/AI3.png" alt="Slack Bot Assistant" class="auto-slide-img">
+                <div class="auto-slide-gradient"></div>
+                <div class="auto-slide-info">
+                  <div class="auto-slide-meta">
+                    <div class="auto-slide-num">Project 03 / 05</div>
+                    <h3 class="auto-slide-title">Slack Bot Assistant</h3>
+                    <p class="auto-slide-desc">AI-powered Slack bot that onboards new hires and acts as a personal assistant — answering questions and routing requests inside the company.</p>
+                  </div>
+                  <div>
+                    <div class="auto-slide-badge">n8n · Slack · AI</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="auto-slide" onclick="openAutoLb(3)">
+              <div class="auto-slide-img-wrap">
+                <img src="photos/AI4.png" alt="AI Risk Predictor" class="auto-slide-img">
+                <div class="auto-slide-gradient"></div>
+                <div class="auto-slide-info">
+                  <div class="auto-slide-meta">
+                    <div class="auto-slide-num">Project 04 / 05</div>
+                    <h3 class="auto-slide-title">AI Risk Predictor</h3>
+                    <p class="auto-slide-desc">Daily scheduled trigger feeds business data through an AI risk model and delivers a structured risk report automatically each morning.</p>
+                  </div>
+                  <div>
+                    <div class="auto-slide-badge">n8n · Scheduled · AI</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="auto-slide" onclick="openAutoLb(4)">
+              <div class="auto-slide-img-wrap">
+                <img src="photos/AI5.png" alt="Client Onboarding" class="auto-slide-img">
+                <div class="auto-slide-gradient"></div>
+                <div class="auto-slide-info">
+                  <div class="auto-slide-meta">
+                    <div class="auto-slide-num">Project 05 / 05</div>
+                    <h3 class="auto-slide-title">Client Onboarding Pipeline</h3>
+                    <p class="auto-slide-desc">Automatically sets up a client's dedicated Slack channel after contract signing and form submission — zero manual steps.</p>
+                  </div>
+                  <div>
+                    <div class="auto-slide-badge">n8n · Slack · Forms</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /track -->
+        </div><!-- /outer -->
+
+        <!-- Dots -->
+        <div class="auto-dots" id="autoDots"></div>
+
+        <!-- Thumbnails -->
+        <div class="auto-thumbs" id="autoThumbs">
+          <div class="auto-thumb active" onclick="goToSlide(0)"><img src="photos/AI1.png" alt="1"></div>
+          <div class="auto-thumb"        onclick="goToSlide(1)"><img src="photos/AI2.png" alt="2"></div>
+          <div class="auto-thumb"        onclick="goToSlide(2)"><img src="photos/AI3.png" alt="3"></div>
+          <div class="auto-thumb"        onclick="goToSlide(3)"><img src="photos/AI4.png" alt="4"></div>
+          <div class="auto-thumb"        onclick="goToSlide(4)"><img src="photos/AI5.png" alt="5"></div>
+        </div>
+
+      </div><!-- /wrap -->
     </div>
   </section>
 
@@ -666,14 +970,13 @@
   <section id="contact" class="section contact-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">05</span>
+        <span class="section-number">06</span>
         <h2 class="section-title">Let's Connect</h2>
         <div class="title-underline"></div>
       </div>
       <div class="contact-content">
         <p class="contact-intro">
-          I'm always open to discussing new projects, creative ideas, or opportunities
-          to be part of your vision.
+          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
         </p>
         <div class="contact-info">
           <div class="contact-item">
@@ -714,138 +1017,45 @@
     </div>
   </footer>
 
-  <script>
-    // Smooth scroll for navigation links
-    document.addEventListener('DOMContentLoaded', function() {
-      const navLinks = document.querySelectorAll('a[href^="#"]');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          const href = this.getAttribute('href');
-          if (href !== '#') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          }
-        });
-      });
-
-      // Page transition for profile image link
-      const profileLink = document.querySelector('.profile-image-link');
-      if (profileLink) {
-        profileLink.addEventListener('click', function(e) {
-          // Removed transition to next.html, now handled by onclick
-        });
-      }
-
-      // Navbar scroll effect
-      const navbar = document.querySelector('.navbar');
-      let lastScrollY = window.scrollY;
-
-      window.addEventListener('scroll', function() {
-        const currentScrollY = window.scrollY;
-        
-        if (currentScrollY > 100) {
-          navbar.classList.add('navbar-scrolled');
-        } else {
-          navbar.classList.remove('navbar-scrolled');
-        }
-        
-        lastScrollY = currentScrollY;
-      });
-    });
-
-    function openDetailsModal() {
-      const modal = document.getElementById('detailsModal');
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Prevent scrolling
-    }
-
-    function closeDetailsModal() {
-      const modal = document.getElementById('detailsModal');
-      modal.classList.remove('active');
-      document.body.style.overflow = ''; // Restore scrolling
-    }
-
-    // Close modal when clicking outside
-    document.getElementById('detailsModal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeDetailsModal();
-      }
-    });
-
-    // Close modal on Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeDetailsModal();
-      }
-    });
-  </script>
+  <!-- ── Lightbox ── -->
+  <div class="auto-lightbox" id="autoLightbox">
+    <div class="auto-lb-inner">
+      <button class="auto-lb-close" id="autoLbClose">&times;</button>
+      <button class="auto-lb-nav auto-lb-prev" id="autoLbPrev">&#8249;</button>
+      <button class="auto-lb-nav auto-lb-next" id="autoLbNext">&#8250;</button>
+      <img src="" alt="" class="auto-lb-img" id="autoLbImg">
+      <p class="auto-lb-caption" id="autoLbCaption"></p>
+    </div>
+  </div>
 
   <!-- Details Modal -->
   <div class="details-modal" id="detailsModal">
     <div class="modal-content">
       <button class="modal-close-btn" onclick="closeDetailsModal()">&times;</button>
-      
-      <!-- Left Side - Photo and Hobbies -->
       <div class="modal-photo-section">
         <div class="modal-photo-container">
           <div class="modal-photo-glow"></div>
           <img src="photos/Mypic.jpg" alt="Lister Rodriguez">
         </div>
-
-        <!-- Hobbies -->
         <div class="modal-hobbies-section">
           <h2 class="modal-section-title">Hobbies & Interests</h2>
           <div class="modal-hobbies-list">
-            <div class="modal-hobby-tag">
-              <span class="hobby-icon">💻</span>
-              <span>Coding</span>
-            </div>
-            <div class="modal-hobby-tag">
-              <span class="hobby-icon">📚</span>
-              <span>Learning</span>
-            </div>
-            <div class="modal-hobby-tag">
-              <span class="hobby-icon">🎮</span>
-              <span>Gaming</span>
-            </div>
-            <div class="modal-hobby-tag">
-              <span class="hobby-icon">🎵</span>
-              <span>Music</span>
-            </div>
-            <div class="modal-hobby-tag">
-              <span class="hobby-icon">📸</span>
-              <span>Photography</span>
-            </div>
-            <div class="modal-hobby-tag">
-              <span class="hobby-icon">🥾</span>
-              <span>Hiking</span>
-            </div>
-            <div class="modal-hobby-tag">
-              <span class="hobby-icon">🎬</span>
-              <span>Video Editing</span>
-            </div>
-            <div class="modal-hobby-tag">
-              <span class="hobby-icon">☕</span>
-              <span>Coffee</span>
-            </div>
+            <div class="modal-hobby-tag"><span class="hobby-icon">💻</span><span>Coding</span></div>
+            <div class="modal-hobby-tag"><span class="hobby-icon">📚</span><span>Learning</span></div>
+            <div class="modal-hobby-tag"><span class="hobby-icon">🎮</span><span>Gaming</span></div>
+            <div class="modal-hobby-tag"><span class="hobby-icon">🎵</span><span>Music</span></div>
+            <div class="modal-hobby-tag"><span class="hobby-icon">📸</span><span>Photography</span></div>
+            <div class="modal-hobby-tag"><span class="hobby-icon">🥾</span><span>Hiking</span></div>
+            <div class="modal-hobby-tag"><span class="hobby-icon">🎬</span><span>Video Editing</span></div>
+            <div class="modal-hobby-tag"><span class="hobby-icon">☕</span><span>Coffee</span></div>
           </div>
         </div>
       </div>
-
-      <!-- Right Side - Content -->
       <div class="modal-content-section">
         <div class="modal-content-header">
           <h1>Lister Rodriguez</h1>
-          <p>
-            Virtual Assistant & Full-Stack Data Specialist passionate about 
-            transforming data into intelligent solutions and building AI-powered systems.
-          </p>
+          <p>Virtual Assistant & Full-Stack Data Specialist passionate about transforming data into intelligent solutions and building AI-powered systems.</p>
         </div>
-
-        <!-- Personal Traits -->
         <div class="modal-traits-section">
           <h2 class="modal-section-title">Personal Traits</h2>
           <div class="modal-traits-grid">
@@ -871,8 +1081,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Buttons -->
         <div class="modal-buttons">
           <a href="Resume/Lister Rodriguez_CV.pdf" target="_blank" class="modal-button secondary">📄 View CV</a>
           <a href="https://github.com/leo1233123" target="_blank" class="modal-button secondary">🐙 GitHub</a>
@@ -882,5 +1090,177 @@
     </div>
   </div>
 
+  <script>
+    /* ═══════════════════════════════════════
+       CAROUSEL
+    ═══════════════════════════════════════ */
+    const TOTAL = 5;
+    const AUTOPLAY_MS = 5000;
+    let current = 0;
+    let autoplayTimer = null;
+    let progressTimer = null;
+    let progressStart = null;
+
+    const track     = document.getElementById('autoTrack');
+    const dotsWrap  = document.getElementById('autoDots');
+    const thumbs    = document.querySelectorAll('.auto-thumb');
+    const progressEl = document.getElementById('autoProgress');
+
+    // Build dots
+    for (let i = 0; i < TOTAL; i++) {
+      const d = document.createElement('button');
+      d.className = 'auto-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      d.addEventListener('click', () => goToSlide(i));
+      dotsWrap.appendChild(d);
+    }
+
+    function getDots() { return dotsWrap.querySelectorAll('.auto-dot'); }
+
+    function updateUI(idx) {
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      getDots().forEach((d, i) => d.classList.toggle('active', i === idx));
+      thumbs.forEach((t, i) => t.classList.toggle('active', i === idx));
+    }
+
+    function goToSlide(idx) {
+      current = (idx + TOTAL) % TOTAL;
+      updateUI(current);
+      resetAutoplay();
+      startProgress();
+    }
+
+    document.getElementById('autoPrev').addEventListener('click', () => goToSlide(current - 1));
+    document.getElementById('autoNext').addEventListener('click', () => goToSlide(current + 1));
+
+    // Autoplay
+    function startAutoplay() {
+      autoplayTimer = setInterval(() => goToSlide(current + 1), AUTOPLAY_MS);
+    }
+    function resetAutoplay() {
+      clearInterval(autoplayTimer);
+      startAutoplay();
+    }
+
+    // Progress bar
+    function startProgress() {
+      clearInterval(progressTimer);
+      progressEl.style.width = '0%';
+      progressStart = Date.now();
+      progressTimer = setInterval(() => {
+        const pct = Math.min(100, ((Date.now() - progressStart) / AUTOPLAY_MS) * 100);
+        progressEl.style.width = pct + '%';
+        if (pct >= 100) clearInterval(progressTimer);
+      }, 40);
+    }
+
+    // Swipe support
+    let touchStartX = 0;
+    track.parentElement.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    track.parentElement.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goToSlide(diff > 0 ? current + 1 : current - 1);
+    });
+
+    // Init
+    updateUI(0);
+    startAutoplay();
+    startProgress();
+
+    /* ═══════════════════════════════════════
+       LIGHTBOX
+    ═══════════════════════════════════════ */
+    const lbData = [
+      { src: 'photos/AI1.png', caption: 'Project 01 — AI Content Generation' },
+      { src: 'photos/AI2.png', caption: 'Project 02 — Notion Automation Advisor' },
+      { src: 'photos/AI3.png', caption: 'Project 03 — Slack Bot Assistant' },
+      { src: 'photos/AI4.png', caption: 'Project 04 — AI Risk Predictor' },
+      { src: 'photos/AI5.png', caption: 'Project 05 — Client Onboarding Pipeline' },
+    ];
+    let lbIndex = 0;
+
+    function openAutoLb(idx) {
+      lbIndex = idx;
+      renderLb();
+      document.getElementById('autoLightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLb() {
+      document.getElementById('autoLightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function stepLb(dir) {
+      lbIndex = (lbIndex + dir + lbData.length) % lbData.length;
+      renderLb();
+    }
+
+    function renderLb() {
+      const item = lbData[lbIndex];
+      document.getElementById('autoLbImg').src = item.src;
+      document.getElementById('autoLbImg').alt = item.caption;
+      document.getElementById('autoLbCaption').textContent =
+        item.caption + '  (' + (lbIndex + 1) + ' / ' + lbData.length + ')';
+    }
+
+    document.getElementById('autoLbClose').addEventListener('click', closeLb);
+    document.getElementById('autoLbPrev').addEventListener('click', () => stepLb(-1));
+    document.getElementById('autoLbNext').addEventListener('click', () => stepLb(1));
+    document.getElementById('autoLightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLb();
+    });
+
+    /* ═══════════════════════════════════════
+       GLOBAL KEYBOARD
+    ═══════════════════════════════════════ */
+    document.addEventListener('keydown', function(e) {
+      const lb = document.getElementById('autoLightbox');
+      if (lb.classList.contains('open')) {
+        if (e.key === 'Escape')     closeLb();
+        if (e.key === 'ArrowLeft')  stepLb(-1);
+        if (e.key === 'ArrowRight') stepLb(1);
+        return;
+      }
+      if (e.key === 'ArrowLeft')  goToSlide(current - 1);
+      if (e.key === 'ArrowRight') goToSlide(current + 1);
+    });
+
+    /* ═══════════════════════════════════════
+       DETAILS MODAL
+    ═══════════════════════════════════════ */
+    function openDetailsModal() {
+      document.getElementById('detailsModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDetailsModal() {
+      document.getElementById('detailsModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('detailsModal').addEventListener('click', function(e) {
+      if (e.target === this) closeDetailsModal();
+    });
+
+    /* ═══════════════════════════════════════
+       NAV + SMOOTH SCROLL
+    ═══════════════════════════════════════ */
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      const navbar = document.querySelector('.navbar');
+      window.addEventListener('scroll', function() {
+        navbar.classList.toggle('navbar-scrolled', window.scrollY > 100);
+      });
+    });
+  </script>
 </body>
 </html>
