@@ -576,6 +576,110 @@
       .auto-lb-prev { left: -52px; }
       .auto-lb-next { right: -52px; }
     }
+
+    /* ═══════════════════════════════════════════════
+       EXPERIENCE SECTION
+    ═══════════════════════════════════════════════ */
+    .experience-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    .experience-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(99,102,241,0.18);
+      border-radius: 20px;
+      padding: 2.25rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .experience-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99,102,241,0.4);
+      box-shadow: 0 15px 40px rgba(99,102,241,0.15);
+    }
+    .experience-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(180deg, #6366f1, #8b5cf6);
+    }
+    .experience-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .experience-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .experience-icon {
+      font-size: 1.8rem;
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(99,102,241,0.18), rgba(139,92,246,0.18));
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .experience-title-group h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #f8fafc;
+      margin: 0 0 0.25rem;
+    }
+    .experience-title-group span.experience-role-tag {
+      font-size: 0.85rem;
+      color: #a5b4fc;
+      font-weight: 500;
+    }
+    .experience-stats {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .experience-stat {
+      background: rgba(99,102,241,0.12);
+      border: 1px solid rgba(99,102,241,0.3);
+      color: #c7d2fe;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+    .experience-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.6rem 2rem;
+    }
+    .experience-list li {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      padding-left: 1.35rem;
+      position: relative;
+    }
+    .experience-list li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: #818cf8;
+      font-weight: 700;
+    }
+    @media (max-width: 768px) {
+      .experience-card { padding: 1.75rem 1.5rem; }
+      .experience-list { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -591,6 +695,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#qualifications">Qualifications</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#automation">Automation</a>
         <a href="#contact">Contact</a>
@@ -761,11 +866,77 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Work Experience</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="experience-timeline">
+
+        <!-- YouTube Operations Manager -->
+        <div class="experience-card">
+          <div class="experience-head">
+            <div class="experience-title-group">
+              <div class="experience-icon">📺</div>
+              <div>
+                <h3>YouTube Operations Manager</h3>
+                <span class="experience-role-tag">Multi-Channel Content Operations</span>
+              </div>
+            </div>
+            <div class="experience-stats">
+              <span class="experience-stat">12 Channels Managed</span>
+              <span class="experience-stat">8 Monetized</span>
+            </div>
+          </div>
+          <ul class="experience-list">
+            <li>Prepared scripts and coordinated with spokespeople for talking-head recordings</li>
+            <li>Collected recordings and assigned them to editors for post-production</li>
+            <li>Performed quality assurance (QA) on all edited content before upload</li>
+            <li>Scheduled uploads across each channel's specific publishing calendar</li>
+            <li>Selected thumbnails and decided daily topics per channel</li>
+            <li>Monitored, read, and engaged with audience comments</li>
+            <li>Adjusted content strategy based on audience feedback and comments</li>
+            <li>Managed and trained Virtual Assistants (VAs) on recurring content tasks</li>
+          </ul>
+        </div>
+
+        <!-- Product Development Manager -->
+        <div class="experience-card">
+          <div class="experience-head">
+            <div class="experience-title-group">
+              <div class="experience-icon">🛠️</div>
+              <div>
+                <h3>Product Development Manager</h3>
+                <span class="experience-role-tag">Product Strategy & Team Leadership</span>
+              </div>
+            </div>
+            <div class="experience-stats">
+              <span class="experience-stat">Cross-Functional Team Lead</span>
+            </div>
+          </div>
+          <ul class="experience-list">
+            <li>Held direct planning conversations with the CEO to define product direction</li>
+            <li>Translated CEO vision and requirements into actionable tasks for the team</li>
+            <li>Led development execution, setting priorities and pace of delivery</li>
+            <li>Owned key technical and process decisions on what to build and how</li>
+            <li>Managed and coordinated multiple team members across development tasks</li>
+            <li>Acted as the bridge between leadership direction and hands-on execution</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
   <section id="projects" class="section projects-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">04</span>
+        <span class="section-number">05</span>
         <h2 class="section-title">Featured Projects</h2>
         <div class="title-underline"></div>
       </div>
@@ -839,7 +1010,7 @@
   <section id="automation" class="section automation-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">05</span>
+        <span class="section-number">06</span>
         <h2 class="section-title">Automation Showcase</h2>
         <div class="title-underline"></div>
       </div>
@@ -970,7 +1141,7 @@
   <section id="contact" class="section contact-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">06</span>
+        <span class="section-number">07</span>
         <h2 class="section-title">Let's Connect</h2>
         <div class="title-underline"></div>
       </div>
