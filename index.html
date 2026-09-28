@@ -8,6 +8,7 @@
   <meta http-equiv="Expires" content="0" />
   <title>Lister Rodriguez | Portfolio</title>
   <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="constellation-graph.css?v=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -683,6 +684,7 @@
   </style>
 </head>
 <body>
+  <div id="portfolioView" class="portfolio-view-wrapper">
   <div class="page-transition-overlay" id="pageTransition"></div>
 
   <!-- NAVIGATION -->
@@ -699,6 +701,9 @@
         <a href="#projects">Projects</a>
         <a href="#automation">Automation</a>
         <a href="#contact">Contact</a>
+        <button id="navGraphBtn" class="nav-graph-toggle" title="Switch to Constellation Graph (Shortcut: G)">
+          <span class="orbit-icon">🪐</span> Constellation
+        </button>
       </div>
     </div>
   </nav>
@@ -726,6 +731,9 @@
         <a href="Resume/Lister Rodriguez_CV.pdf" target="_blank" class="btn btn-cv">
           <span>📄</span> View CV
         </a>
+        <button id="heroConstellationBtn" class="btn btn-constellation" onclick="window.profileConstellation ? window.profileConstellation.toggleViewMode(true) : (window.location.hash = 'constellation')" style="background: linear-gradient(135deg, #00f0ff 0%, #a855f7 100%); color: #0b0e14; font-weight: 700; border: none; box-shadow: 0 0 20px rgba(0, 240, 255, 0.4); cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 12px; transition: all 0.3s ease;">
+          <span>🌌</span> Profile Constellation
+        </button>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -1260,6 +1268,190 @@
       </div>
     </div>
   </div>
+  </div><!-- /#portfolioView -->
+
+  <!-- ==============================================================================
+       CONSTELLATION GRAPH - OBSIDIAN DEEP SPACE VIEW
+       ============================================================================== -->
+  <div class="constellation-view-wrapper" id="constellationView" style="display: none;">
+    
+    <!-- Canvas Viewport -->
+    <div id="constellationCanvasContainer">
+      <canvas id="constellationCanvas"></canvas>
+    </div>
+
+    <!-- Top Left Brand & Navigation Bar -->
+    <div class="cg-top-bar">
+      <button class="cg-back-btn" id="cgBackBtn">
+        <span>←</span> Portfolio View
+      </button>
+      <div class="cg-brand-tag">
+        <span>🪐</span> <strong>Constellation Engine</strong> • Obsidian View
+      </div>
+    </div>
+
+    <!-- Top Center Search & Filter HUD -->
+    <div class="cg-search-filter-hud">
+      <div class="cg-search-box">
+        <span class="cg-search-icon">🔍</span>
+        <input type="text" id="cgSearchInput" class="cg-search-input" placeholder="Search skills, projects, tools, experience (e.g. YOLO, Python, n8n, CapCut)..." autocomplete="off" />
+        <button id="cgSearchClear" class="cg-search-clear">&times;</button>
+        <span id="cgSearchCount" class="cg-search-count">33 Stars</span>
+      </div>
+
+      <!-- Domain Filter Pills -->
+      <div class="cg-filter-row">
+        <span class="cg-pill active" data-filter-cluster="all">🌌 All Stars</span>
+        <span class="cg-pill pill-profile" data-filter-cluster="profile">👤 Lister</span>
+        <span class="cg-pill pill-exp" data-filter-cluster="experience">💼 Experience</span>
+        <span class="cg-pill pill-skills" data-filter-cluster="skills">⚡ Skills & Tech</span>
+        <span class="cg-pill pill-projects" data-filter-cluster="projects">🚀 Projects</span>
+        <span class="cg-pill pill-auto" data-filter-cluster="automation">⚙️ Automations</span>
+        <span class="cg-pill pill-about" data-filter-cluster="about">🌟 About</span>
+        <span class="cg-pill pill-qual" data-filter-cluster="qualifications">🎓 MLOps</span>
+        <span class="cg-pill pill-contact" data-filter-cluster="contact">📬 Contact</span>
+      </div>
+    </div>
+
+    <!-- Top Right Collapsible Physics HUD -->
+    <div class="cg-control-hud" id="cgControlHud">
+      <div class="cg-hud-header" id="cgHudToggleBtn">
+        <div class="cg-hud-title">
+          <span>✨</span> Physics & Forces
+        </div>
+        <button class="cg-hud-toggle-btn">▲</button>
+      </div>
+
+      <div class="cg-hud-body">
+        <div class="cg-control-group">
+          <div class="cg-control-label">
+            <span>Repulsion Force</span>
+            <span id="cgRepulsionVal" class="cg-control-value">-1600</span>
+          </div>
+          <input type="range" id="cgRepulsionSlider" class="cg-slider" min="-3200" max="-600" step="50" value="-1600" />
+        </div>
+
+        <div class="cg-control-group">
+          <div class="cg-control-label">
+            <span>Link Distance</span>
+            <span id="cgDistanceVal" class="cg-control-value">240</span>
+          </div>
+          <input type="range" id="cgDistanceSlider" class="cg-slider" min="140" max="420" step="10" value="240" />
+        </div>
+
+        <div class="cg-control-group">
+          <div class="cg-control-label">
+            <span>Centering Gravity</span>
+            <span id="cgGravityVal" class="cg-control-value">0.0015</span>
+          </div>
+          <input type="range" id="cgGravitySlider" class="cg-slider" min="0.0005" max="0.006" step="0.0005" value="0.0015" />
+        </div>
+
+        <div class="cg-control-group">
+          <div class="cg-control-label">
+            <span>Module Labels</span>
+          </div>
+          <select id="cgLabelSelect" class="cg-action-btn" style="width: 100%; text-align: left; padding: 0.4rem 0.6rem; background: rgba(255,255,255,0.06); border-radius: 8px;">
+            <option value="auto" selected>Auto (Zoom & Hubs)</option>
+            <option value="always">Always Visible</option>
+            <option value="hover">On Hover Only</option>
+          </select>
+        </div>
+
+        <div class="cg-switch-group">
+          <span>Data Flow Particles</span>
+          <label class="cg-toggle-switch">
+            <input type="checkbox" id="cgParticlesToggle" checked />
+            <span class="cg-toggle-slider"></span>
+          </label>
+        </div>
+
+        <div class="cg-hud-buttons">
+          <button id="cgRecenterBtn" class="cg-action-btn" title="Shortcut: R">
+            <span>🎯</span> Recenter
+          </button>
+          <button id="cgReheatBtn" class="cg-action-btn" title="Reheat Simulation">
+            <span>⚡</span> Reheat
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide-Over Metadata Drawer (Right Side) -->
+    <div class="cg-drawer" id="cgDrawer">
+      <div class="cg-drawer-header">
+        <div class="cg-drawer-header-info">
+          <div class="cg-drawer-badges">
+            <span class="cg-badge cg-badge-type" id="cgDrawerTypeBadge">component</span>
+            <span class="cg-badge cg-badge-cluster" id="cgDrawerClusterBadge">root</span>
+          </div>
+          <h2 class="cg-drawer-title" id="cgDrawerTitle">index.html</h2>
+          <div class="cg-drawer-path" id="cgDrawerPath">index.html</div>
+        </div>
+        <button class="cg-drawer-close" id="cgDrawerCloseBtn">&times;</button>
+      </div>
+
+      <div class="cg-drawer-body">
+        <div class="cg-metrics-grid">
+          <div class="cg-metric-card">
+            <span class="cg-metric-label">Lines of Code (LOC)</span>
+            <span class="cg-metric-val" id="cgDrawerLoc">1,353</span>
+          </div>
+          <div class="cg-metric-card">
+            <span class="cg-metric-label">File Size</span>
+            <span class="cg-metric-val" id="cgDrawerSize">52.85 KB</span>
+          </div>
+          <div class="cg-metric-card">
+            <span class="cg-metric-label">Connection Degree</span>
+            <span class="cg-metric-val" id="cgDrawerDegree">13</span>
+          </div>
+          <div class="cg-metric-card">
+            <span class="cg-metric-label">Circular Risk (SCC)</span>
+            <div id="cgDrawerRiskContainer">
+              <span class="cg-risk-pill risk-safe">✓ Acyclic</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="cg-drawer-section-title">
+            <span>Inbound Dependents</span>
+            <span class="cg-dep-count" id="cgDrawerInCount">2</span>
+          </div>
+          <div class="cg-dep-list" id="cgDrawerInList"></div>
+        </div>
+
+        <div>
+          <div class="cg-drawer-section-title">
+            <span>Outbound Dependencies</span>
+            <span class="cg-dep-count" id="cgDrawerOutCount">11</span>
+          </div>
+          <div class="cg-dep-list" id="cgDrawerOutList"></div>
+        </div>
+
+        <div>
+          <div class="cg-drawer-section-title">
+            <span>Exported Symbols & Hooks</span>
+          </div>
+          <div class="cg-tag-pill-list" id="cgDrawerExportList"></div>
+        </div>
+      </div>
+
+      <div class="cg-drawer-footer">
+        <button class="cg-btn-primary" id="cgDrawerFocusBtn">🔍 Focus In Graph</button>
+        <a class="cg-btn-secondary" id="cgDrawerOpenBtn" href="#" target="_blank">📄 View Source</a>
+      </div>
+    </div>
+
+    <!-- Floating Tooltip -->
+    <div class="cg-tooltip" id="cgTooltip"></div>
+
+  </div>
+
+  <!-- Floating Quick View Switcher FAB (Always accessible) -->
+  <button class="cg-fab-switcher" id="cgFabSwitcher" title="Press 'G' or click to toggle Constellation Graph">
+    <span class="cg-fab-icon">🌌</span> Constellation Graph
+  </button>
 
   <script>
     /* ═══════════════════════════════════════
@@ -1433,5 +1625,6 @@
       });
     });
   </script>
+  <script src="constellation-graph.js"></script>
 </body>
 </html>
