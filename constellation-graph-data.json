@@ -4,11 +4,11 @@
   "generatedAt": "2026-09-28T19:15:00+08:00",
   "headNodeId": "profile-head",
   "summary": {
-    "totalNodes": 33,
-    "totalLinks": 40,
+    "totalNodes": 35,
+    "totalLinks": 42,
     "domains": [
       { "name": "profile", "count": 1, "label": "Profile Core" },
-      { "name": "experience", "count": 4, "label": "Experience" },
+      { "name": "experience", "count": 6, "label": "Experience" },
       { "name": "skills", "count": 7, "label": "Skills & Tech" },
       { "name": "projects", "count": 6, "label": "Featured Projects" },
       { "name": "automation", "count": 6, "label": "n8n Automations" },
@@ -42,44 +42,68 @@
       "icon": "💼",
       "role": "Professional Career & Leadership",
       "summary": "Proven track record managing multi-channel content operations, leading cross-functional tech teams, and driving AI-powered operational efficiency.",
-      "metrics": { "degree": 5, "inDegree": 1, "outDegree": 4 },
+      "metrics": { "degree": 6, "inDegree": 1, "outDegree": 5 },
       "tags": ["Team Leadership", "Operations", "Project Delivery", "QA"]
     },
     {
-      "id": "exp-youtube",
-      "label": "YouTube Operations Manager",
+      "id": "exp-casgains",
+      "label": "Operations Manager",
       "cluster": "experience",
       "type": "item",
-      "radius": 13,
+      "radius": 14,
       "icon": "📺",
-      "role": "Multi-Channel Content Operations",
-      "summary": "Managed 12 high-velocity YouTube channels (8 monetized). Directed spokespeople recordings, coordinated post-production editors, performed rigorous QA, managed daily publishing calendars, and scaled subscriber growth.",
-      "metrics": { "channels": 12, "monetized": 8, "degree": 2 },
-      "tags": ["12 Channels", "8 Monetized", "QA Operations", "Content Strategy", "VA Training"]
+      "role": "Casgains / Casgains Academy • Remote",
+      "summary": "Led and optimized multi-channel YouTube production and publishing workflows from ideation to release. Coordinated editors, writers, and VAs, enforced QA across metadata/thumbnails, and built AI-assisted workflows with ChatGPT and Claude.",
+      "metrics": { "channels": 12, "monetized": 8, "period": "Feb 2026 – Present" },
+      "tags": ["YouTube Studio", "Content QA", "Workflow Optimization", "OpenAI", "Team Management", "Discord"]
     },
     {
-      "id": "exp-product",
-      "label": "Product Development Manager",
+      "id": "exp-fullstack-ai",
+      "label": "Mid-Level Full-Stack Developer",
+      "cluster": "experience",
+      "type": "item",
+      "radius": 14,
+      "icon": "⚡",
+      "role": "AI, No-Code & Low-Code Systems • Remote",
+      "summary": "Full-stack development using the MERN stack with TypeScript, architecting n8n workflow automations, and engineering custom webhook listeners and REST APIs.",
+      "metrics": { "period": "2024 – Present", "stack": "MERN & TypeScript" },
+      "tags": ["MERN Stack", "TypeScript", "n8n Automation", "Webhooks", "REST APIs", "AI Systems"]
+    },
+    {
+      "id": "exp-coremind",
+      "label": "AI Automation Developer",
+      "cluster": "experience",
+      "type": "item",
+      "radius": 14,
+      "icon": "⚙️",
+      "role": "Core Mind Technology / JenningsOS",
+      "summary": "Architected and deployed 10+ production-grade automation workflows in n8n connecting APIs, webhooks, LLMs, and databases. Integrated OpenAI, Slack, Google Sheets, Asana, Notion, Close CRM, and MongoDB. Built automated onboarding Slack bot.",
+      "metrics": { "workflows": "10+", "period": "Mar 2025 – Jun 2026" },
+      "tags": ["n8n", "OpenAI API", "REST APIs", "Webhooks", "Close CRM", "MongoDB", "Slack", "JavaScript"]
+    },
+    {
+      "id": "exp-qa-intern",
+      "label": "Software Quality Engineer",
       "cluster": "experience",
       "type": "item",
       "radius": 13,
-      "icon": "🛠️",
-      "role": "Product Strategy & Team Leadership",
-      "summary": "Partnered directly with the CEO to shape product vision into actionable development sprints. Led execution, set pace of delivery, owned technical decisions, and managed cross-functional engineering teams.",
-      "metrics": { "degree": 2 },
-      "tags": ["CEO Direct Alignment", "Sprint Planning", "Execution Pace", "Cross-Functional Lead"]
+      "icon": "🛡️",
+      "role": "Under Ronald Rhey P. Miñoza • Hybrid",
+      "summary": "Conducted API testing, system validation, and comprehensive exploratory QA across web applications (VISTA Dashboard). Authored bug reports and test plans, and built automated E2E/integration test suites using pytest-bdd. Top intern cohort.",
+      "metrics": { "period": "Feb 2026 – May 2026", "cohort": "Top Intern" },
+      "tags": ["Pytest-BDD", "Python", "API Testing", "Bug Tracking", "QA Documentation"]
     },
     {
-      "id": "exp-va-lead",
-      "label": "Virtual Assistant Operations Lead",
+      "id": "exp-capstone",
+      "label": "BSIT Capstone Lead",
       "cluster": "experience",
       "type": "item",
-      "radius": 12,
-      "icon": "🤝",
-      "role": "Executive Support & Team Mentorship",
-      "summary": "Trained and mentored virtual assistants on recurring workflows, automated standard operating procedures (SOPs), and optimized executive workflows for remote teams.",
-      "metrics": { "degree": 2 },
-      "tags": ["VA Scaling", "SOP Automation", "Executive Support", "Process Optimization"]
+      "radius": 13,
+      "icon": "🎓",
+      "role": "Bukidnon State University",
+      "summary": "Took complete technical ownership of the architecture, frontend, backend API, database design, deployment, and public defense for a published, production-grade capstone system. Applied full-stack JavaScript and database management.",
+      "metrics": { "graduated": "2026", "period": "Aug 2022 – Jun 2026" },
+      "tags": ["Full-Stack Web Development", "System Architecture", "JavaScript", "Databases"]
     },
     {
       "id": "skills-root",
@@ -448,9 +472,11 @@
     { "source": "profile-head", "target": "qual-root", "weight": 9, "type": "orbit", "description": "AI developer and MLOps credentials" },
     { "source": "profile-head", "target": "contact-root", "weight": 10, "type": "orbit", "description": "Communication channels and professional profiles" },
 
-    { "source": "exp-root", "target": "exp-youtube", "weight": 8, "type": "branch", "description": "Managed 12 YouTube channels & team operations" },
-    { "source": "exp-root", "target": "exp-product", "weight": 8, "type": "branch", "description": "Product development lead in direct CEO alignment" },
-    { "source": "exp-root", "target": "exp-va-lead", "weight": 7, "type": "branch", "description": "Trained and mentored virtual assistants on SOPs" },
+    { "source": "exp-root", "target": "exp-casgains", "weight": 8, "type": "branch", "description": "Operations Manager / YouTube Workflow Manager at Casgains" },
+    { "source": "exp-root", "target": "exp-fullstack-ai", "weight": 8, "type": "branch", "description": "Mid-Level Full-Stack Developer — AI, No-Code & Low-Code Systems" },
+    { "source": "exp-root", "target": "exp-coremind", "weight": 8, "type": "branch", "description": "AI Automation Developer at Core Mind Technology / JenningsOS" },
+    { "source": "exp-root", "target": "exp-qa-intern", "weight": 8, "type": "branch", "description": "Software Quality Engineer under Ronald Rhey P. Miñoza" },
+    { "source": "exp-root", "target": "exp-capstone", "weight": 8, "type": "branch", "description": "BSIT Capstone Lead & Systems Developer at BukSU" },
 
     { "source": "skills-root", "target": "skill-ai-ml", "weight": 9, "type": "branch", "description": "Python, PyTorch, and TensorFlow development" },
     { "source": "skills-root", "target": "skill-cv", "weight": 9, "type": "branch", "description": "Computer vision and YOLOv8 object detection" },
@@ -484,7 +510,9 @@
     { "source": "skill-cv", "target": "proj-coffee", "weight": 5, "type": "cross", "description": "Computer vision expertise applied to coffee sorting" },
     { "source": "skill-ai-ml", "target": "proj-yolo-api", "weight": 5, "type": "cross", "description": "AI & ML modeling powering the YOLOv8 API" },
     { "source": "skill-fullstack", "target": "proj-inventory", "weight": 5, "type": "cross", "description": "MERN stack engineering applied to inventory" },
-    { "source": "exp-youtube", "target": "proj-content", "weight": 5, "type": "cross", "description": "YouTube operations paired with short-form video production" },
-    { "source": "skills-root", "target": "auto-root", "weight": 5, "type": "cross", "description": "Backend and API skills enabling n8n workflow systems" }
+    { "source": "exp-casgains", "target": "proj-content", "weight": 5, "type": "cross", "description": "YouTube operations paired with short-form video production" },
+    { "source": "exp-coremind", "target": "auto-root", "weight": 6, "type": "cross", "description": "Core Mind AI automation role directly driving n8n workflow systems" },
+    { "source": "exp-fullstack-ai", "target": "skill-fullstack", "weight": 6, "type": "cross", "description": "Full-Stack MERN and TypeScript development expertise" },
+    { "source": "exp-capstone", "target": "skill-fullstack", "weight": 5, "type": "cross", "description": "BSIT Capstone system engineering with full-stack technologies" }
   ]
 }

@@ -1,0 +1,139 @@
+[
+  {
+    "id": "exp-casgains",
+    "role": "Operations Manager / YouTube Content Workflow Manager",
+    "company": "Casgains / Casgains Academy",
+    "location": "Remote (Chicago / International)",
+    "period": "February 2026 – Present",
+    "startDate": "2026-02",
+    "endDate": "Present",
+    "type": "Full-Time",
+    "featured": true,
+    "icon": "📺",
+    "stats": ["February 2026 – Present", "Remote (Chicago / Int'l)"],
+    "bullets": [
+      "Led and optimized multi-channel YouTube production and publishing workflows from ideation to final release.",
+      "Coordinated cross-functional teams of video editors, scriptwriters, and Virtual Assistants (VAs), enforcing production schedules and priority task distribution.",
+      "Enforced rigorous content QA standards across metadata, thumbnails, descriptions, CTAs, and disclaimers.",
+      "Managed recruitment, talent assessments, onboarding, and SOP workflow training for creators and editors.",
+      "Built AI-assisted content production workflows using ChatGPT, OpenAI models, and Claude to speed up asset creation."
+    ],
+    "technologies": [
+      "YouTube Studio",
+      "Content QA",
+      "Workflow Optimization",
+      "OpenAI",
+      "Team Management",
+      "Discord"
+    ]
+  },
+  {
+    "id": "exp-fullstack-ai-systems",
+    "role": "Mid-Level Full-Stack Developer — AI, No-Code & Low-Code Systems",
+    "company": "Freelance & Client Solutions",
+    "location": "Remote",
+    "period": "2024 – Present",
+    "startDate": "2024-01",
+    "endDate": "Present",
+    "type": "Full-Time",
+    "featured": true,
+    "icon": "⚡",
+    "stats": ["2024 – Present", "Remote"],
+    "bullets": [
+      "Engineered, tested, and shipped responsive web applications using the MERN stack (MongoDB, Express, React, Node.js) with strict TypeScript typing.",
+      "Architected complex low-code and no-code automation pipelines in n8n connecting diverse SaaS platforms, databases, and LLM APIs.",
+      "Implemented reliable webhook listeners, RESTful endpoints, and custom event handlers for asynchronous system communication.",
+      "Built custom AI agentic integrations connecting OpenAI, Anthropic Claude, and vector search to business workflows.",
+      "Optimized database queries, indexes, and schema designs in MongoDB for high throughput and low-latency response times."
+    ],
+    "technologies": [
+      "MERN",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "n8n Automation",
+      "Webhooks",
+      "REST APIs"
+    ]
+  },
+  {
+    "id": "exp-coremind",
+    "role": "AI Automation Developer / Systems Specialist",
+    "company": "Core Mind Technology / JenningsOS",
+    "location": "Remote",
+    "period": "March 2025 – June 2026",
+    "startDate": "2025-03",
+    "endDate": "2026-06",
+    "type": "Contract",
+    "featured": true,
+    "icon": "⚙️",
+    "stats": ["March 2025 – June 2026", "Reporting to Alex Jennings"],
+    "bullets": [
+      "Architected, tested, and deployed 10+ production-grade automation workflows in n8n connecting APIs, webhooks, LLMs, and databases.",
+      "Integrated business systems including OpenAI (GPT), Slack, Google Sheets, Asana, Notion, Close CRM, and MongoDB.",
+      "Designed and deployed an end-to-end automated employee onboarding Slack bot with interactive quizzes and SOP delivery, replacing manual one-on-one coordination.",
+      "Diagnosed and resolved complex production workflow edge cases (e.g., recursive Slack trigger loops, malformed webhook expressions).",
+      "Used Claude Code, OpenAI Codex, and GitHub Copilot to accelerate automated tooling and documentation."
+    ],
+    "technologies": [
+      "n8n",
+      "OpenAI API",
+      "REST APIs",
+      "Webhooks",
+      "Close CRM",
+      "MongoDB",
+      "Slack",
+      "JavaScript"
+    ]
+  },
+  {
+    "id": "exp-qa-intern",
+    "role": "Software Quality Engineer (Intern)",
+    "company": "Under Ronald Rhey P. Miñoza",
+    "location": "Malaybalay (Hybrid)",
+    "period": "February 2026 – May 2026",
+    "startDate": "2026-02",
+    "endDate": "2026-05",
+    "type": "Internship",
+    "featured": true,
+    "icon": "🛡️",
+    "stats": ["February 2026 – May 2026", "Top Intern Cohort"],
+    "bullets": [
+      "Conducted API testing, system validation, and comprehensive manual and exploratory QA across web applications (e.g., VISTA Dashboard).",
+      "Authored detailed bug reports, test plans, and QA documentation.",
+      "Built automated end-to-end and integration test suites using pytest-bdd.",
+      "Graduated as one of the top interns in the cohort, ensuring high system reliability and zero-downtime production readiness."
+    ],
+    "technologies": [
+      "Pytest-BDD",
+      "Python",
+      "API Testing",
+      "Bug Tracking",
+      "QA Documentation"
+    ]
+  },
+  {
+    "id": "exp-capstone",
+    "role": "BSIT Capstone Lead & Systems Developer",
+    "company": "Bukidnon State University",
+    "location": "Malaybalay City, Bukidnon",
+    "period": "August 2022 – June 2026",
+    "startDate": "2022-08",
+    "endDate": "2026-06",
+    "type": "Academic",
+    "featured": true,
+    "icon": "🎓",
+    "stats": ["Graduated 2026", "Published Capstone"],
+    "bullets": [
+      "Took complete technical ownership of the architecture, frontend, backend API, database design, deployment, and public defense for a published, production-grade capstone system.",
+      "Applied full-stack JavaScript/web technologies and database management across real-world academic and production implementations."
+    ],
+    "technologies": [
+      "Full-Stack Web Development",
+      "System Architecture",
+      "JavaScript",
+      "Databases"
+    ]
+  }
+]

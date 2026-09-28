@@ -1,0 +1,27 @@
+# Local Audit & Working Notes
+Frontend_audits.md
+
+# Operating System & Environment Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & IDE settings
+.vscode/
+.idea/
+*.sw?
+
+# Node / Dependency Directories (if ever initialized)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python Cache & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+venv/
+.venv/
+env/
